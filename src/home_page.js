@@ -13,6 +13,7 @@ function mamaImage(){
 
 function aboutText(){
     const textBox = document.createElement('div');
+    textBox.classList.add('home_text')
     const welcomeText = document.createElement('p');
     const aboutText = document.createElement('p');
     welcomeText.textContent = 'Welcome to Cooking Mama';
@@ -21,3 +22,13 @@ function aboutText(){
     textBox.appendChild(aboutText);
     return textBox
 }
+
+function createHome(){
+    const homePage = document.createElement('div');
+    homePage.classList.add('home_page');
+    homePage.appendChild(mamaImage())
+    homePage.appendChild(aboutText())
+    return homePage
+}
+
+export default createHome;
