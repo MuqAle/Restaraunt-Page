@@ -4,8 +4,10 @@ function mamaImage(){
     mamaImg.classList.add('img_container');
     const topImg = document.createElement('img');
     topImg.classList.add('top_img');
+    topImg.src = '../imgs/clipart847140.png'
     const bottomImg = document.createElement('img');
     bottomImg.classList.add('bottom_img');
+    bottomImg.src = '../imgs/1887846.png'
     mamaImg.appendChild(topImg);
     mamaImg.appendChild(bottomImg);
     return mamaImg
@@ -23,7 +25,7 @@ function aboutText(){
     return textBox
 }
 
-function createHome(){
+function loadHome(){
     const homePage = document.createElement('div');
     homePage.classList.add('home_page');
     homePage.appendChild(mamaImage())
@@ -31,4 +33,4 @@ function createHome(){
     return homePage
 }
 
-export default createHome;
+export default loadHome;

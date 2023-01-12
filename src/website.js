@@ -1,5 +1,8 @@
 function createTitle(){
     const title = document.createElement('div');
+    const titleImg = document.createElement('img');
+    titleImg.src = '../imgs/restaurant_logo.png'
+    title.appendChild(titleImg)
     title.classList.add('title')
     return title
 }
