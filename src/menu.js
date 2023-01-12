@@ -23,12 +23,12 @@ function createFoodItem(foodname,src){
 function createMenu(){
     const menu = document.createElement('div');
     menu.classList.add('menu')
-    menu.appendChild(createFoodItem());
-    menu.appendChild(createFoodItem());
-    menu.appendChild(createFoodItem());
-    menu.appendChild(createFoodItem());
-    menu.appendChild(createFoodItem());
-    menu.appendChild(createFoodItem());
+    menu.appendChild(createFoodItem('Beef Steak', '../imgs/beef_steak.webp'));
+    menu.appendChild(createFoodItem('Chicken Kebab', '../imgs/chicken_kebabs.webp'));
+    menu.appendChild(createFoodItem('Pizza','../imgs/pizza.webp'));
+    menu.appendChild(createFoodItem('Shrimp Tempura','../imgs/shrimp_tempura.webp'));
+    menu.appendChild(createFoodItem('Spaghetti Neapolitan','../imgs/spaghetti_neapolitan.webp'));
+    menu.appendChild(createFoodItem('Udon','../imgs/udon.webp'));
     return menu
 }
 
