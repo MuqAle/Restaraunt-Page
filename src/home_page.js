@@ -26,7 +26,7 @@ function aboutText(){
 }
 
 function loadHome(){
-    const homePage = document.createElement('div');
+    const homePage = document.querySelector('#main');
     homePage.classList.add('home_page');
     homePage.appendChild(mamaImage())
     homePage.appendChild(aboutText())

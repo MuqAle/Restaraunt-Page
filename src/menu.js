@@ -1,6 +1,7 @@
 function createTitle(){
     const title = document.createElement('div');
     const titleImg = document.createElement('img');
+    titleImg.src = '../imgs/menu_title.png'
     titleImg.classList.add('menu_title');
     title.appendChild(titleImg);
     return title
@@ -33,7 +34,7 @@ function createMenu(){
 }
 
 function loadMenu(){
-    const menuPage = document.createElement('div');
+    const menuPage = document.querySelector('#main');
     menuPage.classList.add('menu_page');
     menuPage.appendChild(createTitle());
     menuPage.appendChild(createMenu());
