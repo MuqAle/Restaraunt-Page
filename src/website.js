@@ -12,8 +12,9 @@ function createTitle(){
 }
 
 function activateBtn(evt){
+    const headBtn = document.querySelector('.heading_btn')
     if(evt.target.classList.contains("heading_btn")){
-        operatorBtn.forEach((button) => {
+        headBtn.forEach((button) => {
             button.classList.remove("active");
 });
     evt.target.classList.add("active");
