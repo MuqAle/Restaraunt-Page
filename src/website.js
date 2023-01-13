@@ -1,3 +1,7 @@
+import loadHome from "./home_page";
+import loadMenu from "./menu";
+import loadContact from "./contact";
+
 function createTitle(){
     const title = document.createElement('div');
     const titleImg = document.createElement('img');
@@ -7,29 +11,50 @@ function createTitle(){
     return title
 }
 
+function activateBtn(evt){
+    if(evt.target.classList.contains("heading_btn")){
+        operatorBtn.forEach((button) => {
+            button.classList.remove("active");
+});
+    evt.target.classList.add("active");
+}
+}
+
 function homeBtn(){
-    const homeBtn = document.createElement('button');
+    const homeButton = document.createElement('button');
     homeBtn.classList.add('heading_btn');
     homeBtn.textContent = 'Home'
-    return homeBtn
+    homeButton.addEventListener('click', () => {
+        activateBtn()
+        loadHome()
+    })
+    return homeButton
 }
 function menuBtn(){
-    const menuBtn = document.createElement('button');
+    const menuButton = document.createElement('button');
     menuBtn.classList.add('heading_btn');
-    menuBtn.textContent = 'Menu'
-    return menuBtn
+    menuBtn.textContent = 'Menu';
+    menuButton.addEventListener('click', () => {
+        activateBtn()
+        loadMenu()
+    })
+    return menuButton
 }
 
 function contactBtn(){
-    const contactBtn = document.createElement('button');
+    const contactButton = document.createElement('button');
     contactBtn.classList.add('heading_btn');
     contactBtn.textContent = 'Contact'
-    return contactBtn
+    contactButton.addEventListener('click', () => {
+        activateBtn()
+        loadContact()
+    })
+    return contactButton
 }
 
 function createNav(){
     const nav = document.createElement('div');
-    nav.classList.add('nav')
+    nav.classList.add('nav');
     nav.appendChild(homeBtn());
     nav.appendChild(menuBtn());
     nav.appendChild(contactBtn());
@@ -38,7 +63,24 @@ function createNav(){
 
 function createHeader(){
     const header = document.createElement('div');
+    header.setAttribute("id", "header");
     header.appendChild(createTitle());
     header.appendChild(createNav());
     return header
 }
+
+function createMain(){
+    const main = document.createElement('div');
+    main.setAttribute("id", "main");
+    return main
+}
+
+
+function createPage(){
+    const content = document.querySelector('#content');
+    content.appendChild(createHeader());
+    content.appendChild(createMain());
+    return content
+}
+
+export default createPage
