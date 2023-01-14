@@ -1,0 +1,116 @@
+@font-face {
+    font-family:'HGSoeiKakupoptai';
+    src: url('fonts/HGSoeiKakupoptai/hgrpp1.ttc');
+}
+
+@font-face {
+    font-family:'EightBit';
+    src: url('dist/fonts/eight_bit_dragon/eight-bit-dragon.otf') format(opentype);
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image:url('../dist/imgs/background.gif');
+
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    overflow: hidden;
+}
+
+.title img{
+    height: calc(1668px/4);
+    width:calc(2388px/4);
+    margin-bottom: -80px;
+    margin-top: -40px;
+}
+
+.nav{
+    display: flex;
+    gap: 10px;
+}
+
+.heading_btn{
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 70px;
+}
+
+.img_container{
+   position: relative; 
+   margin: 0 auto;
+   display: inline-block;
+   padding-right:45px;
+   padding-top: 20px;
+}
+
+.img_container .bottom_img{
+    width: calc(454px/1.5);
+    height: calc(485px/1.5);
+    padding-top: 15px;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    right: 0px;
+    left: 1px;   
+}
+
+.img_container .top_img{
+    width: calc(397px/1.6);
+    height: calc(571px/1.6);
+}
+
+.img_container:hover .bottom_img{
+    display: inline;
+}
+
+.img_container:hover .top_img{
+    opacity: 0;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.home_text{
+    text-align: center;
+}
+
+.home_text{
+    
+    font-family: 'HGSoeiKakupoptai',Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(#fff8f5,#fef2b3,
+    #f17101,#fecb45);
+    background-color: #fecb45;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.home_text.welcome{
+    font-size:40px ;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    -moz-text-stroke:2px rgb(0, 0, 0);
+}
+
+.home_text.slogan{
+    font-size: 30px;
+    -webkit-text-stroke: 1.7px rgb(0, 0, 0);
+    -moz-text-stroke: 1.7px rgb(0, 0, 0);
+}
+
+
+
