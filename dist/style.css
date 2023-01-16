@@ -78,6 +78,7 @@ body{
     background-image: linear-gradient(#fff8f5,#fef2b3,#fecb45,
     #f17101,#fecb45);
     background-color: #fecb45;
+    background-clip: text ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
@@ -173,6 +174,7 @@ body{
     background-image: linear-gradient(#fff8f5,#fef2b3,
     #f17101,#fecb45);
     background-color: #fecb45;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
