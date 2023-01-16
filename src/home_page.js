@@ -4,10 +4,10 @@ function mamaImage(){
     mamaImg.classList.add('img_container');
     const topImg = document.createElement('img');
     topImg.classList.add('top_img');
-    topImg.src = '../dist/imgs/clipart/clipart847140.png'
+    topImg.src = 'imgs/clipart/clipart847140.png'
     const bottomImg = document.createElement('img');
     bottomImg.classList.add('bottom_img');
-    bottomImg.src = '../dist/imgs/clipart/1887846.png'
+    bottomImg.src = 'imgs/clipart/1887846.png'
     mamaImg.appendChild(bottomImg);
     mamaImg.appendChild(topImg);
     return mamaImg

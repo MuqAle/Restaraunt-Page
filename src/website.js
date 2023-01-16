@@ -5,7 +5,7 @@ import loadContact from "./contact";
 function createTitle(){
     const title = document.createElement('div');
     const titleImg = document.createElement('img');
-    titleImg.src = '../dist/imgs/heading/restaurant_logo.png'
+    titleImg.src = 'imgs/heading/restaurant_logo.png'
     title.appendChild(titleImg)
     title.classList.add('title')
     return title

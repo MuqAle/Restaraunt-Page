@@ -3,7 +3,7 @@ function createTitle(){
     const titleImg = document.createElement('img');
     title.classList.add('contact_container')
     titleImg.classList.add('contact_title');
-    titleImg.src = '../dist/imgs/heading/contact_us_title.png'
+    titleImg.src = 'imgs/heading/contact_us_title.png'
     title.appendChild(titleImg);
     return title
 }

@@ -2,7 +2,7 @@ function createTitle(){
     const title = document.createElement('div');
     title.classList.add('menu_container')
     const titleImg = document.createElement('img');
-    titleImg.src = '../dist/imgs/heading/menu_title.png'
+    titleImg.src = 'imgs/heading/menu_title.png'
     titleImg.classList.add('menu_title');
     title.appendChild(titleImg);
     return title
@@ -25,12 +25,12 @@ function createFoodItem(foodname,src){
 function createMenu(){
     const menu = document.createElement('div');
     menu.classList.add('menu_list')
-    menu.appendChild(createFoodItem('Beef Steak', '../dist/imgs/food_img/beef_steak.webp'));
-    menu.appendChild(createFoodItem('Chicken Kebab', '../dist/imgs/food_img/chicken_kebabs.webp'));
-    menu.appendChild(createFoodItem('Pizza','../dist/imgs/food_img/pizza.webp'));
-    menu.appendChild(createFoodItem('Shrimp Tempura','../dist/imgs/food_img/shrimp_tempura.webp'));
-    menu.appendChild(createFoodItem('Spaghetti Neapolitan','../dist/imgs/food_img/spaghetti_neapolitan.webp'));
-    menu.appendChild(createFoodItem('Udon','../dist/imgs/food_img/udon.webp'));
+    menu.appendChild(createFoodItem('Beef Steak', 'imgs/food_img/beef_steak.webp'));
+    menu.appendChild(createFoodItem('Chicken Kebab', 'imgs/food_img/chicken_kebabs.webp'));
+    menu.appendChild(createFoodItem('Pizza','imgs/food_img/pizza.webp'));
+    menu.appendChild(createFoodItem('Shrimp Tempura','imgs/food_img/shrimp_tempura.webp'));
+    menu.appendChild(createFoodItem('Spaghetti Neapolitan','imgs/food_img/spaghetti_neapolitan.webp'));
+    menu.appendChild(createFoodItem('Udon','imgs/food_img/udon.webp'));
     return menu
 }
 
