@@ -5,53 +5,90 @@ import loadContact from "./contact";
 function createTitle(){
     const title = document.createElement('div');
     const titleImg = document.createElement('img');
-    titleImg.src = '../imgs/restaurant_logo.png'
+    titleImg.src = '../dist/imgs/heading/restaurant_logo.png'
     title.appendChild(titleImg)
     title.classList.add('title')
     return title
 }
 
-function activateBtn(evt){
-    const headBtn = document.querySelector('.heading_btn')
-    if(evt.target.classList.contains("heading_btn")){
-        headBtn.forEach((button) => {
-            button.classList.remove("active");
-});
-    evt.target.classList.add("active");
-}
+function removeClass(){
+    const main = document.querySelector('#main');
+    main.classList = ''
+    return main
 }
 
+
+
 function homeBtn(){
+    const wrapper = document.createElement('div');
     const homeButton = document.createElement('button');
-    homeBtn.classList.add('heading_btn');
-    homeBtn.textContent = 'Home'
-    homeButton.addEventListener('click', () => {
-        activateBtn()
+    wrapper.append(homeButton);
+    wrapper.classList.add('wrapper');
+    wrapper.classList.add('home_btn');
+    homeButton.classList.add('heading_btn');
+    homeButton.classList.add('active');
+    homeButton.textContent = 'Home'
+    homeButton.addEventListener('click', (e) => {
+        const headBtn = document.querySelectorAll('.heading_btn')
+        if(e.target.classList.contains("heading_btn")){
+            removeClass()
+            headBtn.forEach((button) => {
+                button.classList.remove("active");
+    });
+        e.target.classList.add("active");
         loadHome()
+    }
+        
     })
-    return homeButton
+    return wrapper
 }
 function menuBtn(){
+    const wrapper = document.createElement('div');
     const menuButton = document.createElement('button');
-    menuBtn.classList.add('heading_btn');
-    menuBtn.textContent = 'Menu';
-    menuButton.addEventListener('click', () => {
-        activateBtn()
+    wrapper.append(menuButton);
+    wrapper.classList.add('wrapper');
+    wrapper.classList.add('menu_btn');
+    menuButton.classList.add('heading_btn');
+    menuButton.textContent = 'Menu';
+    menuButton.addEventListener('click', (e) => {
+        const headBtn = document.querySelectorAll('.heading_btn')
+        if(e.target.classList.contains("heading_btn")){
+            removeClass()
+            headBtn.forEach((button) => {
+                button.classList.remove("active");
+    });
+        e.target.classList.add("active");
         loadMenu()
+    }
+        
     })
-    return menuButton
+    return wrapper
 }
 
 function contactBtn(){
+    const wrapper = document.createElement('div');
     const contactButton = document.createElement('button');
-    contactBtn.classList.add('heading_btn');
-    contactBtn.textContent = 'Contact'
-    contactButton.addEventListener('click', () => {
-        activateBtn()
+    wrapper.append(contactButton);
+    wrapper.classList.add('wrapper');
+    wrapper.classList.add('contact_btn');
+    contactButton.classList.add('heading_btn');
+    contactButton.textContent = 'Contact'
+    contactButton.addEventListener('click', (e) => {
+        const headBtn = document.querySelectorAll('.heading_btn')
+        if(e.target.classList.contains("heading_btn")){
+            removeClass()
+            headBtn.forEach((button) => {
+                button.classList.remove("active");
+    });
+        e.target.classList.add("active");
         loadContact()
+    }
+        
     })
-    return contactButton
+    return wrapper
 }
+
+
 
 function createNav(){
     const nav = document.createElement('div');
@@ -81,6 +118,7 @@ function createPage(){
     const content = document.querySelector('#content');
     content.appendChild(createHeader());
     content.appendChild(createMain());
+    loadHome()
     return content
 }
 

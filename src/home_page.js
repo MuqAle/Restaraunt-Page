@@ -4,32 +4,42 @@ function mamaImage(){
     mamaImg.classList.add('img_container');
     const topImg = document.createElement('img');
     topImg.classList.add('top_img');
-    topImg.src = '../imgs/clipart847140.png'
+    topImg.src = '../dist/imgs/clipart/clipart847140.png'
     const bottomImg = document.createElement('img');
     bottomImg.classList.add('bottom_img');
-    bottomImg.src = '../imgs/1887846.png'
-    mamaImg.appendChild(topImg);
+    bottomImg.src = '../dist/imgs/clipart/1887846.png'
     mamaImg.appendChild(bottomImg);
+    mamaImg.appendChild(topImg);
     return mamaImg
 }
 
-function aboutText(){
-    const textBox = document.createElement('div');
-    textBox.classList.add('home_text')
+function Welcome(){
+    const welcomeBox = document.createElement('div');
     const welcomeText = document.createElement('p');
+    welcomeBox.classList.add('home_text');
+    welcomeBox.classList.add('welcome');
+    welcomeText.textContent = 'Welcome to Cooking Mama!';
+    welcomeBox.appendChild(welcomeText);
+    return welcomeBox
+}
+
+function Slogan(){
+    const sloganBox = document.createElement('div');
     const aboutText = document.createElement('p');
-    welcomeText.textContent = 'Welcome to Cooking Mama';
-    aboutText.textContent = "There's room for improvement to even better than Mama";
-    textBox.appendChild(welcomeText);
-    textBox.appendChild(aboutText);
-    return textBox
+    sloganBox.classList.add('home_text');
+    sloganBox.classList.add('slogan')
+    aboutText.textContent = "There's room for improvement to be even better than Mama!";
+    sloganBox.appendChild(aboutText);
+    return sloganBox
 }
 
 function loadHome(){
     const homePage = document.querySelector('#main');
-    homePage.classList.add('home_page');
+    homePage.classList.add('home_page')
+    homePage.textContent = ''
+    homePage.appendChild(Welcome())
     homePage.appendChild(mamaImage())
-    homePage.appendChild(aboutText())
+    homePage.appendChild(Slogan())
     return homePage
 }
 
